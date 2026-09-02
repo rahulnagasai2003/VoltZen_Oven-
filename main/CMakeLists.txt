@@ -1,0 +1,23 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "max31856.c"
+        "pzem_fan.c"
+        "nvs_manager.c"
+        "sensor_task.c"
+        "wifi_prov_mgr.c"
+        "mqtt_mgr.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        esp_wifi
+        nvs_flash
+        esp_driver_spi
+        esp_driver_uart
+        esp_driver_gpio
+        espressif__mqtt
+        esp_event
+        esp_netif
+        esp_http_server
+    PRIV_REQUIRES
+        espressif__cjson
+)
